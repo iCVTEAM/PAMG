@@ -1,0 +1,1 @@
+python train_vq_con_6.py --name rvq_con6_cu17 --gpu_id 0 --dataset_name t2m --batch_size 512 --num_quantizers 6  --max_epoch 50 --quantize_dropout_prob 0.2 --gamma 0.05

@@ -1,0 +1,1 @@
+python train_res_transformer_bseg.py --name rtrans_bseg_b64dp0.2wog  --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_seg_wogq0.2nb512bs512 --cond_drop_prob 0.2 --share_weight | tee rtrans_bseg_b64dp0.2wog.txt

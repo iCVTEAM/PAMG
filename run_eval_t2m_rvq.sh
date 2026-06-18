@@ -1,0 +1,1 @@
+python eval_t2m_vq_con.py --gpu_id 0 --name rvq_con_nb256 --dataset_name t2m --ext rvq_nq6

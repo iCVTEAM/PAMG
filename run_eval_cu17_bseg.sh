@@ -1,0 +1,1 @@
+python eval_t2m_trans_res_bseg.py --res_name rtrans_bseg_b64dp0.2wog --dataset_name t2m --name mtrans_bseg_b64n6dp0.2wog --gpu_id 0 --cond_scale 4 --time_steps 10 --ext evaluation | tee note/eval_bseg.txt

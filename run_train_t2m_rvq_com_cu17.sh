@@ -1,0 +1,1 @@
+python train_vq_com.py --name rvq_com_wogq0.2nb128 --gpu_id 0 --dataset_name t2m --batch_size 256 --nb_code 128 --num_quantizers 6  --max_epoch 50 --quantize_dropout_prob 0.2

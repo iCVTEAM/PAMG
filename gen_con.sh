@@ -1,0 +1,1 @@
+python gen_t2m_con6_test.py --name mtrans_con6_b64n6dp0.1wog --dataset_name t2m --gpu_id 0 --cond_scale 4 --time_steps 10 --ext exp6

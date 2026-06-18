@@ -1,0 +1,1 @@
+python train_vq_con.py --name rvq_con_wogq0.2nb512 --gpu_id 0 --dataset_name t2m --is_continue --batch_size 512 --nb_code 512 --num_quantizers 6  --max_epoch 50 --quantize_dropout_prob 0.2 | tee note/rvq_con_wogq0.2nb512.txt

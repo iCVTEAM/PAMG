@@ -1,0 +1,53 @@
+# Generated and private artifacts
+checkpoints/
+generation/
+editing/
+glove/
+log/
+logs/
+note/
+parco_result/
+save/
+wandb/
+
+# Datasets
+dataset/HumanML3D/
+dataset/KIT-ML/
+
+# Restricted or external model folders
+llama-2-7b/
+llama-7b-4bit/
+
+# Large binaries and generated media
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.wav
+*.mp3
+*.mp4
+*.gif
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Python/cache/editor files
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
