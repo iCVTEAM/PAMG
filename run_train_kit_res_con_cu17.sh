@@ -1,1 +1,0 @@
-python train_res_transformer_con.py --name rtrans_con_b64dp0.2wog  --gpu_id 0 --dataset_name kit --batch_size 16 --vq_name rvq_con_wogq0.2nb512 --cond_drop_prob 0.2 --share_weight | tee note/kit_rtrans_con_b64dp0.2wog.txt

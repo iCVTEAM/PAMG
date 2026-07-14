@@ -1,1 +1,0 @@
-python train_res_transformer_bcft.py --name rtrans_bcft_b64n6dp02nb512.1wog  --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_cft_wogq0.2nb512 --cond_drop_prob 0.2 --share_weight

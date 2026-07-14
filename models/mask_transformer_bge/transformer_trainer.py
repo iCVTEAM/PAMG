@@ -7,7 +7,7 @@ from collections import OrderedDict
 from utils.utils import *
 from os.path import join as pjoin
 from utils.eval_t2m import evaluation_mask_transformer_seg, evaluation_res_transformer_seg
-from models.mask_transformer.tools import *
+from models.mask_transformer_bge.tools import *
 
 from einops import rearrange, repeat
 

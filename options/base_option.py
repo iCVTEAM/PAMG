@@ -8,9 +8,9 @@ class BaseOptions():
         self.initialized = False
 
     def initialize(self):
-        self.parser.add_argument('--name', type=str, default="mtrans_con_b64n6dp0.1wog", help='Name of this trial')
+        self.parser.add_argument('--name', type=str, default="mtrans_bge_b64n6dp0.1wog", help='Name of this trial')
 
-        self.parser.add_argument('--vq_name', type=str, default="rvq_con6_cu17", help='Name of the rvq model.')
+        self.parser.add_argument('--vq_name', type=str, default="rvq_con_wogq0.2nb512", help='Name of the rvq model.')
 
         self.parser.add_argument("--gpu_id", type=int, default=-1, help='GPU id')
         self.parser.add_argument('--dataset_name', type=str, default='t2m', help='Dataset Name, {t2m} for humanml3d, {kit} for kit-ml')

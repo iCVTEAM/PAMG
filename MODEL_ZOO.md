@@ -75,4 +75,4 @@ log/
 - Add download URLs.
 - Add SHA256 checksums.
 - Confirm license/usage terms for every checkpoint.
-- Add a minimal inference example once `gen_t2m_bge.py` is finalized.
+- Add a minimal single-prompt inference example.

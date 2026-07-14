@@ -1,1 +1,0 @@
-python train_t2m_transformer_bseg.py --name mtrans_bseg_b64n6dp0.2wog --n_layers 6 --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_seg_wogq0.2nb512bs512 --max_epoch 500 | tee note/mtrans_bseg_b64n6dp0.2wog.txt

@@ -1,1 +1,0 @@
-python train_res_transformer_token.py --name rtrans_part_v1_cu110  --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_part_v1_cu110 --cond_drop_prob 0.2 --share_weight

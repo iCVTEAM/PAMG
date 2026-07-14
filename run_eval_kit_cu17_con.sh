@@ -1,1 +1,0 @@
-python eval_t2m_trans_res_con.py --res_name rtrans_con_b64dp0.2wog --dataset_name kit --name mtrans_con_b64n6dp0.1wog --gpu_id 0 --cond_scale 2 --time_steps 72 --ext evaluation | tee note/kit_eval_con_t72.txt

@@ -191,7 +191,7 @@ def load_vq_model():
     return left_arm_vq_model, right_arm_vq_model, up_body_vq_model, down_body_vq_model, vq_opt
 
 if __name__ == '__main__':
-    parser = TrainT2MOptions()
+    parser = TrainT2MOptions(default_name="mtrans_bge_b64n6dp0.1wog")
     opt = parser.parse()
     fixseed(opt.seed)
 

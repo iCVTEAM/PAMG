@@ -25,7 +25,7 @@ class EvalT2MOptions(BaseOptions):
         self.parser.add_argument('--use_res_model', action="store_true", help='Whether to use residual transformer.')
         # self.parser.add_argument('--est_length', action="store_true", help='Training iterations')
 
-        self.parser.add_argument('--res_name', type=str, default='rtrans_con_b64dp0.2wog', help='Model name of residual transformer')
+        self.parser.add_argument('--res_name', type=str, default='rtrans_bge_b64dp0.2wog', help='Model name of residual transformer')
         self.parser.add_argument('--text_path', type=str, default="", help='Text prompt file')
         self.parser.add_argument('--edit_limb', type=str, nargs='*', default=[], help='edit_limb')
 

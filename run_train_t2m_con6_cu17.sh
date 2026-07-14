@@ -1,1 +1,0 @@
-python train_t2m_transformer_con_6.py --name mtrans_con6_b64n6dp0.1wog --is_continue --n_layers 6 --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_con6_cu17 --max_epoch 500 | tee note/mtrans_con6_b64n6dp0.1wog.txt

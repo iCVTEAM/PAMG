@@ -1,1 +1,0 @@
-python eval_t2m_trans_res_bcft.py --res_name rtrans_bcft_b64n6dp02nb512.1wog --dataset_name t2m --name mtrans_bcft_b64n6dp0nb512.1wog --gpu_id 0 --cond_scale 4 --time_steps 10 --ext evaluation

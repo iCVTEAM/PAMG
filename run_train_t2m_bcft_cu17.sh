@@ -1,1 +1,0 @@
-python train_t2m_transformer_bcft.py --name mtrans_bcft_b64n6dp0nb128.1wog --n_layers 4 --n_heads 9 --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_cft_wogq0.2nb128b512 --max_epoch 500

@@ -10,7 +10,7 @@ from tqdm.auto import tqdm
 from typing import Callable, Optional, List, Dict
 from copy import deepcopy
 from functools import partial
-from models.mask_transformer.tools import *
+from models.mask_transformer_bge.tools import *
 from torch.distributions.categorical import Categorical
 from transformers import AutoTokenizer, AutoModel
 import os

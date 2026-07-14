@@ -1,1 +1,0 @@
-python eval_t2m_trans_res_seg.py --res_name rtrans_part_v1_cu17 --dataset_name t2m --name mtrans_con_b64n6dp0.1wog --gpu_id 0 --cond_scale 4 --time_steps 10 --ext evaluation

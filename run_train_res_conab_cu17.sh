@@ -1,1 +1,0 @@
-python train_res_transformer_con_ab.py --name rtrans_conab_b64dp0.2wog  --gpu_id 0 --dataset_name t2m --batch_size 64 --vq_name rvq_con_wogq0.2nb512 --cond_drop_prob 0.2 --share_weight | tee note/rtrans_conab_b64dp0.2wog.txt

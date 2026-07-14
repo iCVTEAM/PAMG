@@ -6,7 +6,7 @@ def arg_parse(is_train=False):
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     ## dataloader
-    parser.add_argument('--dataset_name', type=str, default='humanml3d', help='dataset directory')
+    parser.add_argument('--dataset_name', type=str, default='t2m', help='dataset directory')
     parser.add_argument('--batch_size', default=256, type=int, help='batch size')
     parser.add_argument('--window_size', type=int, default=64, help='training motion length')
     parser.add_argument("--gpu_id", type=int, default=0, help='GPU id')
@@ -58,7 +58,7 @@ def arg_parse(is_train=False):
     parser.add_argument('--ext', type=str, default='default', help='reconstruction loss')
 
     ## other
-    parser.add_argument('--name', type=str, default="test", help='Name of this trial')
+    parser.add_argument('--name', type=str, default="rvq_con_wogq0.2nb512", help='Name of this trial')
     parser.add_argument('--is_continue', action="store_true", help='Name of this trial')
     parser.add_argument('--checkpoints_dir', type=str, default='./checkpoints', help='models are saved here')
     parser.add_argument('--log_every', default=500, type=int, help='iter log frequency')
@@ -71,7 +71,7 @@ def arg_parse(is_train=False):
     parser.add_argument('--which_epoch', type=str, default="all", help='Name of this trial')
 
     ## For Res Predictor only
-    parser.add_argument('--vq_name', type=str, default="rvq_nq6_dc512_nc512_noshare_qdp0.2", help='Name of this trial')
+    parser.add_argument('--vq_name', type=str, default="rvq_con_wogq0.2nb512", help='Name of this trial')
     # parser.add_argument('--n_res', type=int, default=2, help='Name of this trial')
     # parser.add_argument('--do_vq_res', action="store_true")
     parser.add_argument("--seed", default=3407, type=int)

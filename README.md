@@ -1,18 +1,9 @@
-<p align="center">
-  <img width="80%" src="https://ericguo5513.github.io/momask/static/images/teaser.png" alt="MoMask teaser" />
-</p>
-
 # PAMG
 
 This repository contains the PyTorch implementation of **PAMG**, a text-to-motion generation pipeline for part-aware motion generation. PAMG builds on the MoMask-style masked-and-residual generation framework, replaces the text-conditioning branch with a frozen `BAAI/bge-large-en-v1.5` encoder, and represents motion with separate RVQ tokenizers for body parts.
 
-[Project Page: TBD](#) | [Paper: TBD](#) | [Pretrained Models](MODEL_ZOO.md) | [Data Preparation](DATA.md)
+[Pretrained Models](MODEL_ZOO.md) | [Data Preparation](DATA.md)
 
-## News
-
-- **[2026/06]** Release the PAMG training and evaluation code with BGE text conditioning.
-- **[2026/06]** Add the part-aware RVQ tokenizer pipeline used by PAMG.
-- **[TBD]** Public pretrained checkpoints will be added after final hosting and license review.
 
 ## Release Plans
 
@@ -33,10 +24,10 @@ This repository contains the PyTorch implementation of **PAMG**, a text-to-motio
 - `eval_t2m_trans_res_bge.py`: evaluates text-to-motion generation with the BGE masked and residual transformers.
 - `models/mask_transformer_bge/`: BGE-conditioned transformer and trainer modules.
 - `models/vq_seg_con/`: part-aware RVQ-VAE implementation used by the released PAMG path.
-- `data/`, `motion_loaders/`, `utils/`: HumanML3D/KIT-ML loading, evaluation, and visualization utilities inherited from MoMask-style pipelines.
-- `prepare/`: helper scripts for downloading public evaluator assets and pretrained checkpoints once links are finalized.
+- `data/`, `motion_loaders/`, `utils/`: HumanML3D/KIT-ML loading, evaluation, and plotting utilities inherited from MoMask-style pipelines.
+- `prepare/`: helper scripts for public evaluator assets and GloVe files once links are finalized.
 
-Other experimental scripts are kept for reproducibility of the research workspace, but the public release is centered on the PAMG path above.
+The public release is centered on the PAMG/BGE path above; experimental branches from the research workspace are intentionally kept out of this tree.
 
 ## Installation
 
@@ -60,7 +51,7 @@ print("BGE model is available:", name)
 PY
 ```
 
-For visualization and BVH export, install the optional dependencies required by the original MoMask visualization utilities. Some rendering paths also require SMPL/SMPL-X assets, which are not redistributed in this repository.
+Optional rendering or BVH export scripts are not part of this minimal release. SMPL/SMPL-X assets and other third-party visualization resources are not redistributed in this repository.
 
 ## Data Preparation
 
@@ -194,56 +185,9 @@ checkpoints/<dataset_name>/<masked_transformer_name>/eval/<ext>.log
 
 The script reports FID, Diversity, R-Precision, Matching Score, and Multimodality following the MoMask/Text2Motion evaluation protocol.
 
-## Prompt Generation
-
-A clean single-prompt BGE generation entry point is planned. The current tree still contains several experimental generation scripts from the research workspace, but the stable released path is training and evaluation through the BGE scripts listed above.
-
-## Quick Checks
-
-After installing the environment, these checks do not require datasets or checkpoints:
-
-```bash
-python - <<'PY'
-import torch, einops, transformers
-print("core dependencies are available")
-PY
-python -m py_compile train_vq_con.py train_t2m_transformer_bge.py train_res_transformer_bge.py eval_t2m_trans_res_bge.py
-python train_vq_con.py --help
-python train_t2m_transformer_bge.py --help
-python train_res_transformer_bge.py --help
-python eval_t2m_trans_res_bge.py --help
-```
-
-The full training and evaluation commands above additionally require the datasets, evaluator checkpoints, and model weights described in [DATA.md](DATA.md) and [MODEL_ZOO.md](MODEL_ZOO.md). Without those files, the commands should parse correctly and then stop at the missing `checkpoints/.../opt.txt` or dataset file.
-
 ## Acknowledgements
 
 This codebase is built on the MoMask text-to-motion framework and its related HumanML3D/KIT-ML evaluation pipeline. We thank the authors of MoMask, HumanML3D, T2M-GPT, MDM, MLD, vector-quantize-pytorch, Hugging Face Transformers, and BAAI/FlagEmbedding for their open-source work.
-
-## Citation
-
-If you find this repository useful, please cite our project paper once it is available. The final BibTeX will be added before public release.
-
-```bibtex
-@article{pamg2026,
-  title   = {PAMG},
-  author  = {TBD},
-  journal = {TBD},
-  year    = {2026}
-}
-```
-
-Please also cite MoMask and BGE/FlagEmbedding according to their upstream instructions.
-
-```bibtex
-@inproceedings{guo2024momask,
-  title     = {Momask: Generative masked modeling of 3d human motions},
-  author    = {Guo, Chuan and Mu, Yuxuan and Javed, Muhammad Gohar and Wang, Sen and Cheng, Li},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages     = {1900--1910},
-  year      = {2024}
-}
-```
 
 ## License
 

@@ -1,1 +1,0 @@
-python eval_t2m_trans_res.py --res_name rtrans_replicate --dataset_name t2m --name mtrans_replicate --gpu_id 0 --cond_scale 4 --time_steps 10 --ext evaluation

@@ -1,1 +1,0 @@
-python train_vq_cft.py --name rvq_cft_wogq0.2nb128b512 --gpu_id 0 --dataset_name t2m --batch_size 512 --nb_code 128 --num_quantizers 6  --max_epoch 50 --quantize_dropout_prob 0.2 | tee note/rvq_cft_wogq0.2nb128b512.txt
