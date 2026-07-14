@@ -344,6 +344,3 @@ if __name__ == '__main__':
         print(msg_final, file=f, flush=True)
 
     f.close()
-
-
-# python eval_t2m_trans.py --name t2m_nlayer8_nhead6_ld384_ff1024_cdp0.1_vq --dataset_name t2m --gpu_id 3 --cond_scale 4 --time_steps 18 --temperature 1 --topkr 0.9 --gumbel_sample --ext cs4_ts18_tau1_topkr0.9_gs
