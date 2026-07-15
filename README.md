@@ -3,8 +3,6 @@ The code of the paper "PaMG: Adaptive part-based motion generation and editing f
 
 This repository contains the PyTorch implementation of **PAMG**, a text-to-motion generation pipeline for part-aware motion generation. PAMG builds on the MoMask-style masked-and-residual generation framework, replaces the text-conditioning branch with a frozen `BAAI/bge-large-en-v1.5` encoder, and represents motion with separate RVQ tokenizers for body parts.
 
-[Pretrained Models](MODEL_ZOO.md) | [Data Preparation](DATA.md)
-
 
 ## Release Plans
 
